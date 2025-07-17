@@ -8,8 +8,9 @@
              </a>
              <div class="collapse" id="artikelCollapse">
                  <div class="collapse-body">
-                     <a href="index.php?page=artikel&kategori=teknologi" class="nav-link">Konsep Teknologi</a>
-                     <a href="index.php?page=artikel&kategori=marketing" class="nav-link">Tips Digital Marketing</a>
+                     <a href="index.php?page=artikel&kategori=teknologi" class="nav-link">Teknologi</a>
+                     <a href="index.php?page=artikel&kategori=marketing" class="nav-link">Digital Marketing</a>
+                     <a href="index.php?page=artikel&kategori=desain" class="nav-link">Trend Desain</a>
                  </div>
              </div>
          </li>

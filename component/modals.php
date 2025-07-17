@@ -81,18 +81,53 @@
 </div>
 
 <div class="modal fade" id="logoutModal" tabindex="-1" aria-labelledby="logoutModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered">
-    <div class="modal-content rounded-4 shadow">
-      <div class="modal-body p-4 text-center">
-        <h5 class="mb-0" id="logoutModalLabel">Konfirmasi Logout</h5>
-        <p class="mb-0 mt-2 text-muted">Apakah Anda yakin ingin keluar dari sesi ini?</p>
-      </div>
-      <div class="modal-footer flex-nowrap p-0">
-        <a href="logout.php" class="btn btn-lg btn-link fs-6 text-danger text-decoration-none col-6 m-0 rounded-0 border-end">
-            <strong>Ya, Logout</strong>
-        </a>
-        <button type="button" class="btn btn-lg btn-link fs-6 text-decoration-none col-6 m-0 rounded-0" data-bs-dismiss="modal">Batal</button>
-      </div>
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content rounded-4 shadow">
+            <div class="modal-body p-4 text-center">
+                <h5 class="mb-0" id="logoutModalLabel">Konfirmasi Logout</h5>
+                <p class="mb-0 mt-2 text-muted">Apakah Anda yakin ingin keluar dari sesi ini?</p>
+            </div>
+            <div class="modal-footer flex-nowrap p-0">
+                <a href="logout.php" class="btn btn-lg btn-link fs-6 text-danger text-decoration-none col-6 m-0 rounded-0 border-end">
+                    <strong>Ya, Logout</strong>
+                </a>
+                <button type="button" class="btn btn-lg btn-link fs-6 text-decoration-none col-6 m-0 rounded-0" data-bs-dismiss="modal">Batal</button>
+            </div>
+        </div>
     </div>
-  </div>
+</div>
+
+<!-- MODAL BARU: UNTUK TAMBAH ARTIKEL -->
+<div class="modal fade" id="addArticleModal" tabindex="-1" aria-labelledby="addArticleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content rounded-4">
+            <div class="modal-header border-0">
+                <h5 class="modal-title w-100 text-center" id="addArticleModalLabel">Tambah Artikel Baru</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body px-4 pb-4">
+                <!-- Form mengirim data ke script proses_tambah_artikel.php -->
+                <form action="proses_tambah_artikel.php" method="POST" enctype="multipart/form-data">
+                    <div class="mb-3">
+                        <label for="articleTitle" class="form-label">Judul Artikel</label>
+                        <input type="text" class="form-control" id="articleTitle" name="tittle" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="articleCategory" class="form-label">Kategori</label>
+                        <select class="form-select" id="articleCategory" name="kategori" required>
+                            <option value="" selected disabled>Pilih Kategori...</option>
+                            <option value="teknologi">Teknologi</option>
+                            <option value="marketing">Digital Marketing</option>
+                            <option value="desain">Trend Desain</option>
+                        </select>
+                    </div>
+                    <div class="mb-4">
+                        <label for="articleFile" class="form-label">Upload File</label>
+                        <input class="form-control" type="file" id="articleFile" name="article_file" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary w-100 mt-3">Simpan Artikel</button>
+                </form>
+            </div>
+        </div>
+    </div>
 </div>

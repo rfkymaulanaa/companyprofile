@@ -125,11 +125,6 @@ $kategori = isset($_GET['kategori']) ? $_GET['kategori'] : 'semua';
             </div>';
                 break;
 
-            case 'desain':
-                echo '<h2 class="text-primary fw-bold mb-4">Artikel Kategori: Trend Desain</h2>';
-                echo '<p class="text-muted">Ini adalah daftar semua artikel yang berhubungan dengan tren desain grafis...</p>';
-                break;
-
             default:
                 echo '<h2 class="text-primary fw-bold mb-4">Semua Artikel</h2>';
                 echo '<p class="text-muted">Selamat datang di halaman artikel kami. Silakan pilih kategori dari menu di samping.</p>';

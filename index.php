@@ -7,7 +7,7 @@ include 'template/header.php'; ?>
 include 'template/navbar.php';
 include 'template/sidebar.php';
 ?>
-<!-- 4. KONTEN UTAMA -->
+<!-- konten utama -->
 <main class="main-content">
     <?php
     $page = isset($_GET['page']) ? $_GET['page'] : 'home';
@@ -57,31 +57,22 @@ include 'template/sidebar.php';
     });
 
     document.addEventListener('DOMContentLoaded', function() {
-        // Ambil parameter dari URL
         const urlParams = new URLSearchParams(window.location.search);
         const loginError = urlParams.get('login_error');
 
-        // Jika ada parameter 'login_error=1'
         if (loginError) {
-            // Ambil pesan error yang disimpan di session oleh PHP
             const errorMessage = "<?php
                                     if (isset($_SESSION['login_error_message'])) {
-                                        // Cetak pesan ke dalam variabel JavaScript
                                         echo addslashes($_SESSION['login_error_message']);
-                                        // Hapus session setelah digunakan agar tidak muncul lagi
                                         unset($_SESSION['login_error_message']);
                                     }
                                     ?>";
 
             if (errorMessage) {
-                // Temukan elemen alert di dalam modal
                 const errorAlert = document.getElementById('loginErrorAlert');
-                // Masukkan pesan error ke dalamnya
                 errorAlert.textContent = errorMessage;
-                // Tampilkan elemen alert
                 errorAlert.classList.remove('d-none');
 
-                // Buat instance modal Bootstrap dan tampilkan
                 const signInModal = new bootstrap.Modal(document.getElementById('signInModal'));
                 signInModal.show();
             }

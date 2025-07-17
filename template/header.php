@@ -97,7 +97,7 @@
         }
 
         .secondary-nav .nav-link.active {
-            background-color: var(--bs-secondary);
+            background-color: var(--bs-primary);
             color: #fff;
         }
 
@@ -168,7 +168,6 @@
             margin-left: 280px;
             padding: 2rem;
             flex-grow: 1;
-            /* Membuat konten mengisi ruang yang tersedia */
         }
 
         .content-card {
@@ -180,13 +179,11 @@
         /* 5. Footer */
         .main-footer {
             margin-left: 280px;
-            /* Sejajar dengan konten utama */
             padding: 1rem 2rem;
             text-align: right;
             font-size: 0.9rem;
             color: #6c757d;
             background-color: #f0f2f5;
-            /* Warna sama dengan body */
         }
 
         /* Penyesuaian untuk layar kecil (Mobile) */
@@ -257,7 +254,6 @@
             transition: transform 0.3s ease, box-shadow 0.3s ease;
             background-color: #ffffff;
             overflow: hidden;
-            /* Penting untuk efek ikon */
         }
 
         .mission-card:hover {
@@ -619,6 +615,64 @@
 
         .testimonial-section .blockquote-footer {
             color: rgba(255, 255, 255, 0.7);
+        }
+
+        .section-padding {
+            padding: 5rem 2rem;
+        }
+
+        .section-title {
+            font-weight: 800;
+            color: var(--bs-primary);
+        }
+
+        .section-subtitle {
+            color: #6c757d;
+        }
+
+        /* Hero Section */
+        .hero-section {
+            background: linear-gradient(135deg, rgb(var(--bs-primary-rgb)) 0%, rgb(var(--bs-secondary-rgb)) 100%);
+            color: white;
+            border-radius: 1rem;
+            padding: 6rem 2rem;
+        }
+
+        .hero-section .display-3 {
+            font-weight: 800;
+        }
+
+        .hero-section .btn-light {
+            padding: 0.8rem 2rem;
+            font-weight: 700;
+            border-radius: 50rem;
+            transition: all 0.3s ease;
+        }
+
+        .hero-section .btn-light:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Layanan Section */
+        .service-card-home {
+            border: none;
+            border-radius: 1rem;
+            padding: 2rem;
+            transition: all 0.3s ease;
+            background-color: #ffffff;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.05);
+        }
+
+        .service-card-home:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(var(--bs-secondary-rgb), 0.2);
+        }
+
+        .service-card-home .icon {
+            font-size: 3rem;
+            color: var(--bs-secondary);
+            margin-bottom: 1.5rem;
         }
     </style>
 </head>
